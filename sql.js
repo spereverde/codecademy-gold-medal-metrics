@@ -141,13 +141,13 @@ const orderedSports = (country, field, sortAscending) => {
     let ordered = '';
     if (field) {
         if (sortAscending) {
-            ordered = `ORDER BY ${field} ASC;`;
+            ordered = `ORDER BY ${field} ASC`;
         } else {
-            ordered = `ORDER BY ${field} DESC;`;
+            ordered = `ORDER BY ${field} DESC`;
         }
     }
-    return `SELECT sport, COUNT(sport) as count,
-      (COUNT(sport) * 100 / (select COUNT(*) FROM GoldMedal WHERE country = '${country}')) as percentage
+    return `SELECT sport, COUNT(sport) AS count,
+      (COUNT(sport) * 100 / (select COUNT(*) FROM GoldMedal WHERE country = '${country}')) AS percent
       FROM GoldMedal WHERE country = '${country}' GROUP BY sport ${ordered};`;
 };
 
