@@ -130,7 +130,7 @@ describe('createGoldMedalTable', function() {
     });
   });
 
-  it('should return a SQL query string that creates a Country table with a required year column', function(done) {
+  it('should return a SQL query string that creates a GoldMedal table with a required year column', function(done) {
     const query = sql.createGoldMedalTable();
     emptyDb.run(query, () => {
       emptyDb.run("INSERT INTO GoldMedal (name, event, gender, sport, discipline, city, country, season) VALUES ('Mike D', '100km', 'Men', 'Running', 'Track', 'Athens', 'Greece', 'Summer')", (error) => {
@@ -143,7 +143,7 @@ describe('createGoldMedalTable', function() {
     });
   });
 
-  it('should return a SQL query string that creates a Country table with a required name column', function(done) {
+  it('should return a SQL query string that creates a GoldMedal table with a required name column', function(done) {
     const query = sql.createGoldMedalTable();
     emptyDb.run(query, () => {
       emptyDb.run("INSERT INTO GoldMedal (year, event, gender, sport, discipline, city, country, season) VALUES (1991, '100km', 'Men', 'Running', 'Track', 'Athens', 'Greece', 'Summer')", (error) => {
@@ -156,7 +156,7 @@ describe('createGoldMedalTable', function() {
     });
   });
 
-  it('should return a SQL query string that creates a Country table with a required event column', function(done) {
+  it('should return a SQL query string that creates a GoldMedal table with a required event column', function(done) {
     const query = sql.createGoldMedalTable();
     emptyDb.run(query, () => {
       emptyDb.run("INSERT INTO GoldMedal (year, name, gender, sport, discipline, city, country, season) VALUES (1991, 'Mike D', 'Men', 'Running', 'Track', 'Athens', 'Greece', 'Summer')", (error) => {
@@ -169,7 +169,7 @@ describe('createGoldMedalTable', function() {
     });
   });
 
-  it('should return a SQL query string that creates a Country table with a required gender column', function(done) {
+  it('should return a SQL query string that creates a GoldMedal table with a required gender column', function(done) {
     const query = sql.createGoldMedalTable();
     emptyDb.run(query, () => {
       emptyDb.run("INSERT INTO GoldMedal (year, name, event, sport, discipline, city, country, season) VALUES (1991, 'Mike D', '100km', 'Running', 'Track', 'Athens', 'Greece', 'Summer')", (error) => {
@@ -182,7 +182,7 @@ describe('createGoldMedalTable', function() {
     });
   });
 
-  it('should return a SQL query string that creates a Country table with a required sport column', function(done) {
+  it('should return a SQL query string that creates a GoldMedal table with a required sport column', function(done) {
     const query = sql.createGoldMedalTable();
     emptyDb.run(query, () => {
       emptyDb.run("INSERT INTO GoldMedal (year, name, event, gender, discipline, city, country, season) VALUES (1991, 'Mike D', '100km', 'Men', 'Track', 'Athens', 'Greece', 'Summer')", (error) => {
@@ -195,7 +195,7 @@ describe('createGoldMedalTable', function() {
     });
   });
 
-  it('should return a SQL query string that creates a Country table with a required discipline column', function(done) {
+  it('should return a SQL query string that creates a GoldMedal table with a required discipline column', function(done) {
     const query = sql.createGoldMedalTable();
     emptyDb.run(query, () => {
       emptyDb.run("INSERT INTO GoldMedal (year, name, event, gender, sport, city, country, season) VALUES (1991, 'Mike D', '100km', 'Men', 'Running', 'Athens', 'Greece', 'Summer')", (error) => {
@@ -208,7 +208,7 @@ describe('createGoldMedalTable', function() {
     });
   });
 
-  it('should return a SQL query string that creates a Country table with a required city column', function(done) {
+  it('should return a SQL query string that creates a GoldMedal table with a required city column', function(done) {
     const query = sql.createGoldMedalTable();
     emptyDb.run(query, () => {
       emptyDb.run("INSERT INTO GoldMedal (year, name, event, gender, sport, discipline, country, season) VALUES (1991, 'Mike D', '100km', 'Men', 'Running', 'Track', 'Greece', 'Summer')", (error) => {
@@ -221,7 +221,7 @@ describe('createGoldMedalTable', function() {
     });
   });
 
-  it('should return a SQL query string that creates a Country table with a required country column', function(done) {
+  it('should return a SQL query string that creates a GoldMedal table with a required country column', function(done) {
     const query = sql.createGoldMedalTable();
     emptyDb.run(query, () => {
       emptyDb.run("INSERT INTO GoldMedal (year, name, event, gender, sport, discipline, city, season) VALUES (1991, 'Mike D', '100km', 'Men', 'Running', 'Track', 'Athens', 'Summer')", (error) => {
@@ -234,7 +234,7 @@ describe('createGoldMedalTable', function() {
     });
   });
 
-  it('should return a SQL query string that creates a Country table with a required season column', function(done) {
+  it('should return a SQL query string that creates a GoldMedal table with a required season column', function(done) {
     const query = sql.createGoldMedalTable();
     emptyDb.run(query, () => {
       emptyDb.run("INSERT INTO GoldMedal (year, name, event, gender, sport, discipline, city, country) VALUES (1991, 'Mike D', '100km', 'Men', 'Running', 'Track', 'Athens', 'Greece')", (error) => {
